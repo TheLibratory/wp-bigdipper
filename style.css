@@ -1,0 +1,128 @@
+/* 
+Theme Name: The Libratory Theme
+Theme URI: http://blogs.lib.utexas.edu/tis/
+Description: Child theme for Twenty Eleven designed to be used for Libratory (TIS) and other UT Library blogs
+Author: The Libratory (Casey Hunt)
+Author URI: 
+Template: twentyeleven
+Version: 0.1
+*/
+
+@import url("../twentyeleven/style.css");
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:700italic,400);
+
+/**************************
+	General Styling
+**************************/
+body {
+	background: url(images/bg.png) repeat top left; 
+	/* Top margin set so that when logged out, the UT Lib branding bar displays 
+		and this keeps the site from being hidden by the two bars. */
+	margin-top: 100px;
+}
+#page { box-shadow: rgba(0,0,0,0.5) 0px 2px 2px 2px }
+
+/**************************
+	UT & Lib Branding Bar
+**************************/
+#utlib-branding-bar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	box-shadow: rgba(0,0,0,0.5) 1px 1px 2px; 
+}
+.bar-ut { width: 100%; background-color: white; height: 35px; }
+.bar-library { width: 100%; background-color: #cc5500; height: 28px; }
+.logged-in #ut-branding-bar { display: none; }
+.logged-in {margin-top: 0;}
+#utlib-branding-bar > * { margin: 0; padding: 0;}
+
+/**************************
+	Header & Branding 
+**************************/
+input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
+#site-title, #site-description {
+	position: absolute;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+#site-title a { color: teal; font-size: 4em;}
+#site-title {
+	background: rgba(255,255,255,0.8);
+	top: 2em;
+	padding: .7em;
+	font-weight: 700;
+	font-style: italic;
+	border-top: 1px solid rgba(255,255,255,0.3);
+
+	text-shadow:
+	rgba(0,0,0,0.5) 2px 0px 0px,
+	rgba(0,0,0,0.1) 5px 0px 0px;
+	/*rgba(0,0,0,0.1) 5px 0px 0px;*/
+}
+#site-description {
+	color: white;
+	background: rgba(0,0,0,0.6);
+	top: 7em;
+	padding-left: 2em;
+	border-top: 1px solid #cc5500;
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	box-shadow: rgba(0,0,0,0.4) 0 2px 3px;
+}
+#branding hgroup { margin: 0; }
+#branding {border-top: 3px solid #333;}
+#branding #searchform {
+	display: none;
+}
+
+/**************************
+	Menu / Navigation
+**************************/
+#access { border-top: 2px solid black; }
+
+/**************************
+	Sidebar
+**************************/
+.widget-title {
+	background-color: teal;
+	padding-left: 1em;
+	color: white;
+	border-radius: 5px;
+	margin-bottom: .5em;
+	text-shadow: rgba(0,0,0,0.5) 1px 1px 2px;
+	font-family: 'Arial Bold', 'Helvetica Bold', sans-serif;
+	font-size: .9em;
+}
+
+/**************************
+	Responsive / Breakpoint
+**************************/
+@media screen and (max-width: 500px) {
+	#site-title, #site-description {
+		position: relative;
+		top: auto;
+	}
+	#branding img, .bar-ut { display: none; }
+	#page { margin: 0; }
+	body { padding: 0; margin-top: 3.5em; }
+}
+
+@media (max-width: 275px) {
+	#page {
+		display: none;
+	}
+	body:after {
+	content: "What are you using? A calculator?";
+	color: white;
+	display: block;
+	margin: 1em;
+	font-family: 'Arial Bold', 'Helvetica Bold', sans-serif;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	word-wrap: break-word;
+	}
+}
