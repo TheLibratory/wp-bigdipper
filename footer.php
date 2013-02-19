@@ -36,7 +36,13 @@
 ****************************-->
 	<div id="utlib-branding-bar">
 				<div class="branding-bar bar-ut"><img src="<?php echo get_stylesheet_directory_uri()?>/images/utlib-footer-tower.jpg"></div>
-				<div class="branding-bar bar-library"><img src="<?php echo get_stylesheet_directory_uri()?>/images/utlib-footer-flyingbook.gif"></div>
+				<div class="branding-bar bar-library">
+					<div id="bar-liblogo"><img src="<?php echo get_stylesheet_directory_uri()?>/images/utlib-footer-flyingbook.gif"></div>
+						<div class="bar-metabox">
+							<div class="bar-metabox blogin"><a href="wp-admin/">Log In/Admin</a></div>
+							<div class="bar-metabox libblog"><a href="#">LIBblog</a></div>
+						</div>
+				</div>
 	</div>
 </body>
 </html>

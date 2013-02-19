@@ -34,12 +34,42 @@ body {
 }
 .bar-ut { width: 100%; background-color: white; height: 35px; }
 .bar-library { width: 100%; background-color: #cc5500; height: 28px; }
-.logged-in #ut-branding-bar { display: none; }
+.logged-in #utlib-branding-bar { display: none; }
 .logged-in {margin-top: 0;}
 #utlib-branding-bar > * { margin: 0; padding: 0;}
+#bar-liblogo { display: inline;}
+.bar-metabox {
+	display: inline;
+	float: right;
+	height: inherit;
+	padding: 0;
+	box-sizing: border-box;
+}
+.blogin { background-color: rgba(0,0,0,1); color: lightblue; padding: 0 1em; padding-top: 0.125em; }
+.libblog {
+	border-right: 1px solid rgba(0,0,0,0.35);
+	font-family: 'Roboto Condensed', sans-serif;
+	color: white;
+	font-weight: bold;
+	letter-spacing: 0.125em;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	box-shadow: rgba(0,0,0,0.5) -1px 0 0;
+	background: rgb(0,183,234); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(0,183,234,1) 0%, rgba(0,122,183,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,183,234,1)), color-stop(100%,rgba(0,122,183,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,122,183,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,122,183,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(0,183,234,1) 0%,rgba(0,122,183,1) 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  rgba(0,183,234,1) 0%,rgba(0,122,183,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b7ea', endColorstr='#007ab7',GradientType=0 ); /* IE6-9 */
+	padding: 0 1em;
+	padding-top: 0.125em;
+}
+.libblog a, .libblog a:active, .libblog a:visited, .libblog a:hover { color: white; }
 
 /**************************
-	Header & Branding 
+	Header & Hero Image
 **************************/
 input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 #site-title, #site-description {
