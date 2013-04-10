@@ -42,14 +42,19 @@
 	UT & Library Branding 
 ****************************-->
 	<div id="utlib-branding-bar">
-				<div class="branding-bar bar-ut"><img src="<?php bloginfo('stylesheet_directory')?>/images/utlib-footer-tower.jpg"></div>
+				<div class="branding-bar bar-ut">
+					<a href="http://www.utexas.edu/"><img src="<?php bloginfo('stylesheet_directory')?>/images/utlib-footer-tower.jpg"></a>
+				</div>
 				<div class="branding-bar bar-library">
-					<div id="bar-liblogo"><img src="<?php bloginfo('stylesheet_directory')?>/images/utlib-footer-flyingbook.gif"></div>
-						<div class="bar-metabox">
-							<div class="bar-metabox blogin"><a href="wp-admin/">Log In/Admin</a></div>
-							<div class="bar-metabox libblog"><a href="#">LIBblog</a></div>
-						</div>
+					<div id="bar-liblogo">
+						<a href="http://lib.utexas.edu/"><img src="<?php bloginfo('stylesheet_directory')?>/images/utlib-footer-flyingbook.gif"></a>
+					</div>
+					<div class="bar-metabox">
+						<div class="bar-metabox blogin"><a href="<?php echo site_url(); ?>/wp-admin/">Log In/Admin</a></div>
+						<div class="bar-metabox libblog"><a href="http://blogs.lib.utexas.edu/">LIBblog</a></div>
+					</div>
 				</div>
 	</div>
 </body>
+<script src="<?php bloginfo('stylesheet_directory')?>/js/functions.js" type="text/javascript"></script>
 </html>

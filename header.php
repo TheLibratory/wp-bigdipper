@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <?php
 /**
  * The Header for our theme.
@@ -8,7 +9,8 @@
  * @subpackage Twenty_Eleven
  * @since Twenty Eleven 1.0
  */
-?><!DOCTYPE html>
+?>
+
 <!--[if IE 6]>
 <html id="ie6" <?php language_attributes(); ?>>
 <![endif]-->
@@ -22,6 +24,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php

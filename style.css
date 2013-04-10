@@ -29,8 +29,11 @@ body {
 	/* Top margin set so that when logged out, the UT Lib branding bar displays 
 		and this keeps the site from being hidden by the two bars. */
 	margin-top: 100px;
+	font-size: 14px;
 }
 #page { box-shadow: rgba(0,0,0,0.5) 0px 2px 2px 2px }
+/*.entry-title { padding-right: 0;}*/
+
 
 /**************************
 	UT & Lib Branding Bar
@@ -54,6 +57,7 @@ body {
 	height: inherit;
 	padding: 0;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .blogin { background-color: rgba(0,0,0,1); color: lightblue; padding: 0 1em; padding-top: 0.125em; }
 .libblog {
@@ -81,10 +85,11 @@ body {
 /**************************
 	Header & Hero Image
 **************************/
-input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
+input#s {background: url(images/search.png) no-repeat 3px 5px #fff;}
 #site-title, #site-description {
 	position: absolute;
 	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	width: 100%;
@@ -93,8 +98,8 @@ input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 #site-title a { color: teal; font-size: 4em;}
 #site-title {
 	background: rgba(255,255,255,0.8);
-	top: 2em;
-	padding: .7em;
+	top: 30px;
+	padding: .7em .7em 1.2em;
 	font-weight: 700;
 	font-style: italic;
 	border-top: 1px solid rgba(255,255,255,0.3);
@@ -107,22 +112,26 @@ input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 #site-description {
 	color: white;
 	background: rgba(0,0,0,0.6);
-	top: 7em;
+	top: 102px;
 	padding-left: 2em;
 	border-top: 1px solid #cc5500;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	box-shadow: rgba(0,0,0,0.4) 0 2px 3px;
 }
+#site-title.no-header, #site-description.no-header {
+	position: relative;
+	top: auto;
+}
 #branding hgroup { margin: 0; }
 #branding {border-top: 3px solid #333;}
-#branding #searchform {
-	display: none;
-}
+#branding #searchform { display: none; }
+#branding img {margin-bottom: 0px;}
 
 /**************************
 	Menu / Navigation
 **************************/
 #access { border-top: 2px solid black; }
+.liblinks-dropdown { width: 100%;}
 
 /**************************
 	Sidebar
@@ -138,6 +147,7 @@ input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 	font-size: .9em;
 }
 .widget ul { margin-left: 1em; }
+.widget_search #s { width: inherit; }
 
 /**************************
 	Footer & Bottom Bar
@@ -154,7 +164,7 @@ input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 #credits li { display: inline; list-style-type: none; padding: 0 0.35em;}
 #credits > :not(:first-child):before { content: " | "; padding-right: 0.5em; }
 .liblinks-list { list-style-type: none; }
-.liblinks-list.libinfo li:before { content: '\00BB \0020'; }
+.liblinks-list li:before { content: '\00BB \0020'; }
 [data-icon]:before {
 	font-family: 'icomoon';
 	content: attr(data-icon);
@@ -168,6 +178,10 @@ input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 /**************************
 	Responsive / Breakpoint
 **************************/
+@media screen and (max-width: 700px) {
+/*	section.featured-post .attachment-small-feature { display: none; }
+	article.feature-image.small { width: 100%; }*/
+}
 @media screen and (max-width: 500px) {
 	#site-title, #site-description {
 		position: relative;
@@ -176,12 +190,24 @@ input#s {background: url(images/search.png) no-repeat 5px 6px #fff;}
 	#branding img, .bar-ut { display: none; }
 	#page { margin: 0; }
 	body { padding: 0; margin-top: 3.5em; }
+	.comments-link { display: none; }
 }
-
-@media (max-width: 275px) {
+@media screen and (max-width: 400px) {
+	.blogin { display: none; }
+	article.feature-image.small .entry-summary p a { display: none; }
+	.featured-posts { height: auto; }
+	/* ul.liblinks-list { display: none; } 
+	select.liblinks-dropdown { display: inline-block;} */
+}
+@media screen and (min-width: 400px) {
+	ul.liblinks-list { display: block; }
+	select.liblinks-dropdown { display: none; }
+}
+@media screen and (max-width: 275px) {
 	#page {
 		display: none;
 	}
+	.bar-metabox { display: none; }
 	body:after {
 	content: "What are you using? A calculator?";
 	color: white;

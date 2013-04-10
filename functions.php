@@ -1,6 +1,6 @@
 <?php
 
-// Add "Home Page" option to menu system in WP 3+
+/////////////// Add "Home Page" option to menu system /////////////////////////
 function home_page_menu_args( $args ) {
 $args['show_home'] = true;
 return $args;
@@ -26,6 +26,8 @@ $blacklist = array('singular');
 endif;   // Add the extra classes back untouched
 return array_merge($wp_classes, (array) $extra_classes);
 }
+
+///////////////  Default Header Image Replacement  //////////////////////////////
 
 //deregister the header images of Twenty Eleven, and register a new header image
 add_action( 'after_setup_theme', 'raw_theme_header_images', 11 ); 
@@ -54,5 +56,25 @@ $custom_header_changes = array(
 add_theme_support( 'custom-header', $custom_header_changes );
 }
 
+///////////////  Post Limit Override  /////////////////////////////
 
+// Function to override the set value of Post Limit in Wordpress
+function ursa_post_override ( $query ) {
+	if ( is_author() ) {
+		//Display ALL posts for author pages
+		$query->set( 'posts_per_page', -1 );
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'ursa_post_override', 1);
+
+/////////////// Remove Showcase Sidebar Option ////////////////////
+function ursa_disable_showcase() {
+	//Unregister sidebar-2 (Showcase Sidebar) -- declared in functions.php of /twentyeleven
+	unregister_sidebar( 'sidebar-2' );
+}
+add_action( 'widgets_init', 'ursa_disable_showcase', 11);
+
+
+//End of file
 ?>
