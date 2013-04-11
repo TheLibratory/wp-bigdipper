@@ -66,11 +66,7 @@ get_header(); ?>
 
 						<li>
 							<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>"><?php the_title(); ?></a>
-<<<<<<< HEAD
 							<span style="float:right; font-size: 80%;">Posted: <?php the_time('M d Y'); ?></span>
-=======
-							<span style="float:right; font-size: 80%;">Posted on: <?php the_time('M d Y'); ?></span>
->>>>>>> 0024a6e721f363404939953a17d0f6c9e2d80900
 						</li>
 
 					<?php endwhile; ?>
