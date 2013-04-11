@@ -182,13 +182,13 @@ ul.footerbar { margin: 0; }
 	margin-right: .5em;
 }
 
-/**************************
+/***********************************
 	Responsive / Breakpoint
-**************************/
-@media screen and (max-width: 700px) {
-/*	section.featured-post .attachment-small-feature { display: none; }
-	article.feature-image.small { width: 100%; }*/
-}
+***********************************/
+/* Breaking the sidebar widgets into and out of columns at appropriate widths */
+@media screen and (min-width: 500px) { .widget ul { -webkit-column-count: 2; } }
+@media screen and (min-width: 800px) { .widget ul { -webkit-column-count: 1; } }
+
 @media screen and (max-width: 500px) {
 	#site-title, #site-description {
 		position: relative;
@@ -203,26 +203,21 @@ ul.footerbar { margin: 0; }
 	.blogin { display: none; }
 	article.feature-image.small .entry-summary p a { display: none; }
 	.featured-posts { height: auto; }
-	/* ul.liblinks-list { display: none; } 
-	select.liblinks-dropdown { display: inline-block;} */
-}
-@media screen and (min-width: 400px) {
-	ul.liblinks-list { display: block; }
-	select.liblinks-dropdown { display: none; }
+	.social-text { display: none; }
+	.libsocial li { display: inline; }
+	.widget ul.libsocial li { font-size: 150%; }
 }
 @media screen and (max-width: 275px) {
-	#page {
-		display: none;
-	}
+	#page { display: none; }
 	.bar-metabox { display: none; }
 	body:after {
-	content: "What are you using? A calculator?";
-	color: white;
-	display: block;
-	margin: 1em;
-	font-family: 'Arial Bold', 'Helvetica Bold', sans-serif;
-	font-size: 1.5em;
-	text-transform: uppercase;
-	word-wrap: break-word;
+		content: "What are you using? A calculator?";
+		color: white;
+		display: block;
+		margin: 1em;
+		font-family: 'Arial Bold', 'Helvetica Bold', sans-serif;
+		font-size: 1.5em;
+		text-transform: uppercase;
+		word-wrap: break-word;
 	}
 }
