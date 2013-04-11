@@ -152,19 +152,26 @@ input#s {background: url(images/search.png) no-repeat 3px 1px #fff;}
 /**************************
 	Footer & Bottom Bar
 **************************/
-#site-generator a { color: rgb(36,97, 112); }
-#site-generator { 
-	background: rgb(151,151,151); 
+.footer-bar a { 
+	color: rgb(36,97, 112); 
+	font-weight: bold; 
+}
+#footer-lib-links { background-color: rgb(192,192,192); border-top: none;}
+.footer-bar { 
+	background-color: rgb(151,151,151); 
 	border-top: 1px solid rgb(129,129,129); 
+	color: #666;
 	padding: 0 1em;
 	font-size: 70%;
+	line-height: 2.2em;
 	text-align: right;
 }
 #supplementary { background-color: rgb(240,240,240); }
-#credits li { display: inline; list-style-type: none; padding: 0 0.35em;}
-#credits > :not(:first-child):before { content: " | "; padding-right: 0.5em; }
+ul.footerbar { margin: 0; }
+.footerbar li { display: inline; list-style-type: none; padding: 0 0.35em;}
+.footerbar > :not(:first-child):before { content: " | "; padding-right: 0.5em; }
 .liblinks-list { list-style-type: none; }
-.liblinks-list li:before { content: '\00BB \0020'; }
+/*.liblinks-list li:before { content: '\00BB \0020'; }*/
 [data-icon]:before {
 	font-family: 'icomoon';
 	content: attr(data-icon);
