@@ -134,6 +134,11 @@ input#s {background: url(images/search.png) no-repeat 3px 1px #fff;}
 .liblinks-dropdown { width: 100%;}
 
 /**************************
+	Content
+**************************/
+.wp-caption .wp-caption-text { padding: 10px; }
+.wp-caption .wp-caption-text:before { content: ''; }
+/**************************
 	Sidebar
 **************************/
 .widget-title {
