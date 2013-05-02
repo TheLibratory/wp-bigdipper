@@ -138,6 +138,9 @@ input#s {background: url(images/search.png) no-repeat 3px 1px #fff;}
 **************************/
 .wp-caption .wp-caption-text { padding: 10px; }
 .wp-caption .wp-caption-text:before { content: ''; }
+#author-avatar { margin-right: 0px; }
+#author-description { margin-left: 0px; max-width: 440px; }
+
 /**************************
 	Sidebar
 **************************/

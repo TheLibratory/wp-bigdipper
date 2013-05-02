@@ -42,10 +42,10 @@ get_header(); ?>
 				// If a user has filled out their description, show a bio on their entries.
 				if ( get_the_author_meta( 'description' ) ) : ?>
 				<div id="author-info">
-					<div id="author-avatar" style="float: left;">
+					<div id="author-avatar">
 						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 120 ) ); ?>
 					</div>
-					<div id="author-description" style="float: right;">
+					<div id="author-description">
 						<h2><?php printf( __( '%s', 'twentyeleven' ), get_the_author_meta('display_name') ); ?></h2>
 						<?php
 							$the_author_description = apply_filters("the_content", get_the_author_meta('description'));
