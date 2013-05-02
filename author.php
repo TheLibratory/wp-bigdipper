@@ -42,12 +42,12 @@ get_header(); ?>
 				// If a user has filled out their description, show a bio on their entries.
 				if ( get_the_author_meta( 'description' ) ) : ?>
 				<div id="author-info">
-					<div id="author-avatar">
+					<div id="author-avatar" style="float: left;">
 						<?php userphoto_the_author_photo(); //Dependent on plugin: User Photo (http://wordpress.org/extend/plugins/user-photo/) ?>
 					</div><!-- #author-avatar -->
-					<div id="author-description">
-						<h2><?php printf( __( '%s', 'twentyeleven' ), get_the_author_meta('nickname') ); ?></h2>
-						<?php // the_author_meta( 'description' ); 
+					<div id="author-description" style="float: right;">
+						<h2><?php printf( __( '%s', 'twentyeleven' ), get_the_author_meta('display_name') ); ?></h2>
+						<?php
 							$the_author_description = apply_filters("the_content", get_the_author_meta('description'));
 							echo $the_author_description;
 						?>
