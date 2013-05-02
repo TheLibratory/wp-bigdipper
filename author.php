@@ -43,11 +43,14 @@ get_header(); ?>
 				if ( get_the_author_meta( 'description' ) ) : ?>
 				<div id="author-info">
 					<div id="author-avatar">
-						<?php echo get_avatar( get_the_author_meta( 'user_email' ), apply_filters( 'twentyeleven_author_bio_avatar_size', 60 ) ); ?>
+						<?php userphoto_the_author_photo(); //Dependent on plugin: User Photo (http://wordpress.org/extend/plugins/user-photo/) ?>
 					</div><!-- #author-avatar -->
 					<div id="author-description">
 						<h2><?php printf( __( '%s', 'twentyeleven' ), get_the_author_meta('nickname') ); ?></h2>
-						<?php the_author_meta( 'description' ); ?>
+						<?php // the_author_meta( 'description' ); 
+							$the_author_description = apply_filters("the_content", get_the_author_meta('description'));
+							echo $the_author_description;
+						?>
 					</div><!-- #author-description	-->
 				</div><!-- #author-info -->
 				<?php endif; ?>
