@@ -27,9 +27,9 @@
 					<li><a href="<?php echo esc_url( __( 'http://www.lib.utexas.edu/comments.html?referrer=http://localhost/wpmu/tis/', 'twentyeleven' ) ); ?>"><?php printf( __( 'Comments', 'twentyeleven' ), 'WordPress' ); ?></a></li>
 					<li><a href="http://lib.utexas.edu/website_feedback">Web Site Feedback</a></li>
 					<li><a href="http://www.lib.utexas.edu/about/site.html">About This Site</a></li>
-					<li><a href="http://www.utexas.edu/emergency/">Emergency Preparedness, Safety and Security</a>
-					</li><li><a href="http://www.utexas.edu/web/guidelines/accessibility.html">Accessibility</a></li>
-					<li><a href="http://www.lib.utexas.edu/privacy.html">Privacy/Confidentiality</a></li>
+					<li><a href="http://www.utexas.edu/emergency/">Emergency Preparedness, Safety and Security</a></li>
+					<li><a href="http://www.utexas.edu/web-accessibility-policy">Accessibility</a></li>
+					<li><a href="http://www.utexas.edu/web-privacy-policy">Privacy/Confidentiality</a></li>
 					<li><a href="http://www.lib.utexas.edu/usage_statement.html">Material Usage Statement</a></li>
 				</ul>
 			</div>
